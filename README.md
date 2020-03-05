@@ -13,7 +13,7 @@ You'll need a [Cloudflare Workers account](https://dash.cloudflare.com/sign-up/w
 
 ## Setup
 
-Start by forking the repository.
+To start your own project based on this template, just click "Use this template" or visit this link: https://github.com/lappalj4/cloudflare-worker-cra/generate
 
 #### Set your app name
 
