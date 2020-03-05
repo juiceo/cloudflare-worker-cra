@@ -1,0 +1,33 @@
+name: Build React bundle & Deploy to Cloudflare worker
+
+on:
+    push:
+        branches:
+            - master
+
+jobs:
+    build:
+        runs-on: ubuntu-latest
+        name: Build
+        steps:
+            - uses: actions/checkout@v2
+            - name: Use Node.js
+              uses: actions/setup-node@v1
+              with:
+                  node-version: '12.x'
+            - run: npm install
+            - run: npm run build --if-present
+            - run: npm test
+              env:
+                  CI: true
+    deploy:
+        runs-on: ubuntu-latest
+        name: Deploy
+        steps:
+            - uses: actions/checkout@master
+            - name: Publish
+              uses: cloudflare/wrangler-action@1.1.0
+              with:
+                  apiToken: ${{ secrets.CF_API_TOKEN }}
+              env:
+                  CF_ACCOUNT_ID: f7a0ba9d91b972b96a44309e58b7443b
