@@ -1,6 +1,5 @@
-name = "wrangler-react-app"
+name = "cloudflare-react-template"
 type = "webpack"
-account_id = "f7a0ba9d91b972b96a44309e58b7443b"
 workers_dev = true
 route = ""
 zone_id = ""

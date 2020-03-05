@@ -15,10 +15,10 @@ First, fork the repository.
 
 #### Set your app name
 
-Your Cloudflare workers domain will be of the format `{your-worker-domain}.workers.dev`. When you publish an app on a Worker,
-it will be published on a subdomain corresponding to your app name - `wrangler-react-app.{your-worker-domain}.workers.dev` by default.
+First, open up `wrangler.toml` and change the `name` property - this will be the subdomain that your app is published on.
 
-You can change this by editing `wrangler.toml` and changing the `name` property.
+Your Cloudflare workers domain will be of the format `{your-worker-domain}.workers.dev`. When you publish an app on a Worker,
+it will be published on a subdomain corresponding to your app name - `cloudflare-react-template.{your-worker-domain}.workers.dev` by default.
 
 #### Get your Account ID and create a new API Token
 
@@ -45,5 +45,8 @@ Once done, navigate to your GitHub repository > Settings > Secrets and add the f
 - Name: CF_ACCOUNT_ID
 - Value: your-account-id
 ```
+
+PS: Your account id isn't really a secret and could be shared freely, but I feel it's just more convenient to store this
+configuration within the GitHub secrets instead of the repository code.
 
 That's it! Now, just push a new commit into `master` and you'll find your React app deployed at `{app-name}.{your-worker-domain}.workers.dev`

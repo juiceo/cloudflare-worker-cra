@@ -7,8 +7,8 @@ function App() {
         <div className="App">
             <header className="App-header">
                 <img src={logo} className="App-logo" alt="logo" />
-                <h4>Wrangler React Template</h4>
-                <p>Which automatically deploys to a Cloudflare worker when pushing to master. Sweet!</p>
+                <h4>Cloudflare Workers <3 Create React App</h4>
+                <p>This app automatically deploys to Cloudflare Workers when pushing to master. Sweet!</p>
             </header>
         </div>
     );
