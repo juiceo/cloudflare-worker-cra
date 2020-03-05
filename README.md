@@ -1,17 +1,19 @@
 # Cloudflare Workers <3 Create React App
 
-A CRA project which automatically deploys to Cloudflare Workers with Github Actions. Sweet.
+Cloudflare Workers is a serverless platform which offers a [very cheap and highly scalable](https://workers.cloudflare.com/) way to serve your React application and run other serverless code. This is a fresh CRA project which automatically deploys to Cloudflare Workers with Github Actions, which you can fork and set up in a matter of minutes.
+
+This setup costs $5/mo for **10 million requests per month.**
 
 ## Pre-requisites
 
-You'll need a Cloudflare account with
+You'll need a [Cloudflare Workers account](https://dash.cloudflare.com/sign-up/workers) with
 
 -   A workers domain set up
--   The Workers Unlimited subsciption (\$5/mo)
+-   The Workers Unlimited subsciption ($5/mo)
 
 ## Setup
 
-First, fork the repository.
+Start by forking the repository.
 
 #### Set your app name
 
