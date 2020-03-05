@@ -13,38 +13,38 @@ You'll need a Cloudflare account with
 
 First, fork the repository.
 
-#### Set up your Cloudflare account
+#### Set your app name 
 
-Then, get your Cloudflare Workers account id (you can find this at https://dash.cloudflare.com > Workers) and add it in `wrangler.toml`:
+Your Cloudflare workers domain will be of the format `{your-worker-domain}.workers.dev`. When you publish an app on a Worker,
+it will be published on a subdomain of that - `wrangler-react-app.{your-worker-domain}.workers.dev` by default.
 
-```
-name = "wrangler-react-app"
-type = "webpack"
-account_id = "YOUR-ACCOUNT-ID"
-workers_dev = true
-route = ""
-zone_id = ""
+You can change this by editing `wrangler.toml` and changing the `name` property.
 
-[site]
-bucket = "./build"
-entry-point = "workers-site"
-```
+#### Get your Account ID and create a new API Token
 
-You can also customise the `name = "wrangler-react-app"` - this will be the subdomain under which your app will be published.
+To get your account ID:
 
-#### Create a new API Token
+- Go to https://dash.cloudflare.com > Workers
+- Copy your account ID
 
-Next, go to https://dash.cloudflare.com/profile/api-tokens > Create Token, and create a token:
+To create a new API Token:
 
+- Go to https://dash.cloudflare.com/profile/api-tokens > Create Token
 - Give your token a name (i.e. Github Actions)
 - Choose start with template
 - Select the "Edit Cloudflare Workers" template
 - Account Resources > Include > {your account}
 - Zone Resources > Include > All zones from account > {your account}
 
-Once done, copy your new API Token and navigate to your repository > Settings > Secrets and add a new secret:
+Once done, navigate to your GitHub repository > Settings > Secrets and add the following secrets:
 
+```
 - Name: CF_API_TOKEN
-- Value: the-token-you-just-copied
+- Value: your-api-token
+
+- Name: CF_ACCOUNT_ID
+- Value: your-account-id
+```
+
 
 That's it! Now, just push a new commit into `master` and you'll find your React app deployed at `{app-name}.{your-worker-domain}.workers.dev`
