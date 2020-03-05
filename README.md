@@ -16,7 +16,7 @@ First, fork the repository.
 #### Set your app name
 
 Your Cloudflare workers domain will be of the format `{your-worker-domain}.workers.dev`. When you publish an app on a Worker,
-it will be published on a subdomain of that - `wrangler-react-app.{your-worker-domain}.workers.dev` by default.
+it will be published on a subdomain corresponding to your app name - `wrangler-react-app.{your-worker-domain}.workers.dev` by default.
 
 You can change this by editing `wrangler.toml` and changing the `name` property.
 
