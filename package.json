@@ -1,5 +1,5 @@
 {
-    "name": "cloudflare-react-template",
+    "name": "cloudflare-worker-cra",
     "version": "0.1.0",
     "author": "Juuso Lappalainen",
     "dependencies": {
