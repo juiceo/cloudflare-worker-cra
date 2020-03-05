@@ -2,14 +2,14 @@
 
 Cloudflare Workers is a serverless platform which offers a [very cheap and highly scalable](https://workers.cloudflare.com/) way to serve your React application and run other serverless code. This is a fresh CRA project which automatically deploys to Cloudflare Workers with Github Actions, which you can fork and set up in a matter of minutes.
 
-This setup costs $5/mo for **10 million requests per month.**
+This setup costs \$5/mo for **10 million requests per month.**
 
 ## Pre-requisites
 
 You'll need a [Cloudflare Workers account](https://dash.cloudflare.com/sign-up/workers) with
 
 -   A workers domain set up
--   The Workers Unlimited subsciption ($5/mo)
+-   The Workers Unlimited subsciption (\$5/mo)
 
 ## Setup
 
@@ -20,7 +20,7 @@ To start your own project based on this template, just click "Use this template"
 First, open up `wrangler.toml` and change the `name` property - this will be the subdomain that your app is published on.
 
 Your Cloudflare workers domain will be of the format `{your-worker-domain}.workers.dev`. When you publish an app on a Worker,
-it will be published on a subdomain corresponding to your app name - `cloudflare-react-template.{your-worker-domain}.workers.dev` by default.
+it will be published on a subdomain corresponding to your app name - `cloudflare-worker-cra.{your-worker-domain}.workers.dev` by default.
 
 #### Get your Account ID and create a new API Token
 
