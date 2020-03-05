@@ -1,26 +1,21 @@
 import React from 'react';
 
-import { Typography, Box } from '@material-ui/core';
-import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom';
+import { Typography, Box, Link } from '@material-ui/core';
+import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 
 function App() {
     return (
         <Router>
             <Box p={3}>
-                <Link to="/one">
-                    <Typography variant="h4" align="center">
-                        A React boilerplate
-                    </Typography>
-                </Link>
                 <Typography variant="h4" align="center">
                     A React boilerplate
                 </Typography>
                 <Box display="flex" flexDirection="row" justifyContent="center">
-                    {/* <Link href="/one">One</Link>
+                    <Link href="/one">One</Link>
                     <Box p={2} />
                     <Link href="/two">Two</Link>
                     <Box p={2} />
-                    <Link href="/three">Three</Link> */}
+                    <Link href="/three">Three</Link>
                 </Box>
             </Box>
             <Switch>
