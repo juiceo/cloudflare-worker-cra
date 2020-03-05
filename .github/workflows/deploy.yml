@@ -6,7 +6,7 @@ on:
             - master
 
 jobs:
-    build:
+    build-and-deploy:
         runs-on: ubuntu-latest
         name: Build
         steps:
@@ -20,10 +20,6 @@ jobs:
             - run: npm test
               env:
                   CI: true
-    deploy:
-        runs-on: ubuntu-latest
-        name: Deploy
-        steps:
             - uses: actions/checkout@master
             - name: Publish
               uses: cloudflare/wrangler-action@1.1.0
