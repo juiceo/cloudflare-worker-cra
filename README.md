@@ -1,4 +1,4 @@
-# Wrangler React app
+# Cloudflare Workers <3 Create React App
 
 A CRA project which automatically deploys to Cloudflare Workers with Github Actions. Sweet.
 
