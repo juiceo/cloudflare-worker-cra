@@ -1,0 +1,10 @@
+name = "wrangler-react-app"
+type = "webpack"
+account_id = "f7a0ba9d91b972b96a44309e58b7443b"
+workers_dev = true
+route = ""
+zone_id = ""
+
+[site]
+bucket = "./build"
+entry-point = "workers-site"
